@@ -7,12 +7,12 @@ const Clients = () => {
 
   // Mock client logos - in a real implementation, these would be actual client logos
   const clientLogos = [
-    { name: "Cliente 1", logo: "C1" },
-    { name: "Cliente 2", logo: "C2" },
-    { name: "Cliente 3", logo: "C3" },
-    { name: "Cliente 4", logo: "C4" },
-    { name: "Cliente 5", logo: "C5" },
-    { name: "Cliente 6", logo: "C6" },
+    { name: "Eisen", logo: "/logos2/eisen.png" },
+    { name: "Hansel Connect", logo: "/logos2/hansel.png" },
+    // { name: "Precisa Automação", logo: "/logos2/precisa.webp" },
+    // { name: "JF Assessoria", logo: "/logos/jf_assessoria.png" },
+    { name: "Projacseg", logo: "/logos2/projacseg.webp" },
+    { name: "QVS", logo: "logos2/QVS.webp" },
   ];
 
   return (
@@ -44,15 +44,17 @@ const Clients = () => {
           <p className="text-center text-muted-foreground mb-8">
             Alguns de nossos clientes parceiros
           </p>
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 items-center">
             {clientLogos.map((client, index) => (
               <div
                 key={index}
-                className="aspect-square bg-muted rounded-lg flex items-center justify-center hover:bg-muted/80 transition-colors"
+                className="aspect-square rounded-lg flex items-center justify-center transition-colors"
               >
-                <span className="text-2xl font-bold text-muted-foreground">
-                  {client.logo}
-                </span>
+              
+              <img
+                src={client.logo}
+                className="object-contain max-h-16"
+              />
               </div>
             ))}
           </div>
