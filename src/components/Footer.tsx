@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground py-12">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-5 gap-8">
           {/* Logo e descrição */}
           <div className="md:col-span-2">
             <div className="text-2xl font-bold mb-4">tiqtech</div>
@@ -56,6 +56,33 @@ const Footer = () => {
                 >
                   Contato
                 </button>
+              </li>
+            </ul>
+          </div>
+
+          {/* Informações de Contato */}
+          <div>
+            <h3 className="font-semibold mb-4">Contato</h3>
+            <ul className="space-y-3">
+              <li className="flex items-center gap-2">
+                <span className="text-primary-foreground/60">📧</span>
+                <a href="mailto:contato@tiqtech.com.br" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  contato@tiqtech.com.br
+                </a>
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="text-primary-foreground/60">📞</span>
+                <a href="tel:+5511999999999" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  (11) 99999-9999
+                </a>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary-foreground/60">📍</span>
+                <span className="text-primary-foreground/80">
+                  Rua Exemplo, 123<br />
+                  São Paulo - SP<br />
+                  CEP: 01234-567
+                </span>
               </li>
             </ul>
           </div>

@@ -59,30 +59,30 @@ const Solutions = () => {
   ];
 
   return (
-    <section id="solucoes" className="py-20 bg-muted/50">
+    <section id="solucoes" className="py-20 bg-gradient-to-br from-muted/30 to-muted/60">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
             Nossas <span className="bg-gradient-primary bg-clip-text text-transparent">Soluções</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Tecnologias integradas para otimizar todos os processos da sua empresa
+            Tudo que você precisa para otimizar a gestão e acelerar o crescimento da sua empresa.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {solutions.map((solution, index) => (
-            <Card key={index} className="hover:shadow-xl transition-shadow duration-300 border-0 shadow-lg">
+            <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-0 shadow-lg bg-gradient-to-br from-card to-card/80 hover:scale-[1.02] backdrop-blur-sm">
               <CardHeader>
                 <div className="flex items-center gap-3 mb-2">
                   <Badge 
                     variant="outline" 
-                    className={`border-${solution.color} text-${solution.color}`}
+                    className={`border-${solution.color} text-${solution.color} bg-${solution.color}/5 group-hover:bg-${solution.color}/10 transition-colors duration-300`}
                   >
                     {solution.title}
                   </Badge>
                 </div>
-                <CardTitle className="text-xl mb-2">{solution.subtitle}</CardTitle>
+                <CardTitle className="text-xl mb-2 group-hover:text-primary transition-colors duration-300">{solution.subtitle}</CardTitle>
                 <CardDescription className="text-base">
                   {solution.description}
                 </CardDescription>
@@ -90,9 +90,9 @@ const Solutions = () => {
               <CardContent>
                 <ul className="space-y-2">
                   {solution.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center gap-2">
-                      <div className={`w-2 h-2 rounded-full bg-${solution.color}`}></div>
-                      <span className="text-sm text-muted-foreground">{feature}</span>
+                    <li key={featureIndex} className="flex items-center gap-3 group-hover:translate-x-1 transition-transform duration-300">
+                      <div className={`w-3 h-3 rounded-full bg-${solution.color} shadow-lg`}></div>
+                      <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors duration-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
