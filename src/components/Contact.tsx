@@ -10,7 +10,7 @@ import FormularioBitrix from "./FormularioBitrix";
 const Contact = () => {
 
   return (
-    <section id="contato" className="py-20 bg-muted/50">
+    <section id="contato" className="py-20 bg-gradient-to-br from-primary/5 to-secondary/5">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto">
           <Card className="shadow-xl border-0">

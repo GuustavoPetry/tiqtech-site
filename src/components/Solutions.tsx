@@ -30,7 +30,7 @@ const Solutions = () => {
         "Tags/Etiquetas",
         "Chatbot/IA"
       ],
-      color: "secondary"
+      color: "accent"
     },
     {
       title: "Agentes de IA",
@@ -45,8 +45,8 @@ const Solutions = () => {
       color: "accent"
     },
     {
-      title: "Automações de Marketing",
-      subtitle: "com Mautic",
+      title: "Matic",
+      subtitle: "Automações de Marketing",
       description: "Rastreie o comportamento de leads e clientes e execute uma comunicação mais assertiva",
       features: [
         "Campanhas de e-mail e whatsapp automatizadas",
@@ -59,7 +59,7 @@ const Solutions = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-gradient-to-br from-muted/30 to-muted/60">
+    <section id="services" className="py-20 bg-gradient-to-br from-primary/5 to-secondary/5">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">

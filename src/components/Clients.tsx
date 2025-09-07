@@ -1,8 +1,8 @@
 const Clients = () => {
   const clientTypes = [
-    "Negócios B2B",
-    "Consultorias", 
-    "Corretoras de seguros"
+    "Consultorias",
+    "Negócios B2B", 
+    "Corretoras"
   ];
 
   // Mock client logos - in a real implementation, these would be actual client logos
@@ -14,7 +14,7 @@ const Clients = () => {
   ];
 
   return (
-    <section id="clientes" className="py-20 bg-gradient-to-br from-primary/5 to-secondary/5">
+    <section id="clientes" className="py-20 bg-gradient-to-br from-muted to-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
@@ -26,23 +26,23 @@ const Clients = () => {
         </div>
 
         {/* Tipos de clientes */}
-        <div className="grid md:grid-cols-3 gap-6 mb-16 max-w-4xl mx-auto">
+        <div className="grid grid-cols-3 md:grid-cols-3 gap-6 mb-16 max-w-4xl mx-auto">
           {clientTypes.map((type, index) => (
             <div key={index} className="text-center">
-              <div className="bg-gradient-primary w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white font-bold">{index + 1}</span>
+              <div className="bg-gradient-primary w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-white font-bold w-4">{index + 1}</span>
               </div>
-              <h3 className="text-lg font-semibold">{type}</h3>
+              <h3 className="text-muted-foreground text-lg font-semibold">{type}</h3>
             </div>
           ))}
         </div>
 
         {/* Logos dos clientes */}
         <div className="border-t">
-          <p className="text-center text-muted-foreground pt-12 mb-6 from-accent-foreground">
+          <p className="text-center text-black font-semibold pt-12 mb-6 from-accent-foreground">
             Clientes que confiam na tiqtech
           </p>
-          <div className="grid grid-cols-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 items-center">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 items-center">
             {clientLogos.map((client, index) => (
               <div
                 key={index}
