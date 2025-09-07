@@ -5,8 +5,8 @@ const Solutions = () => {
   const solutions = [
     {
       title: "Bitrix24",
-      subtitle: "Licença, Implementação, Treinamento e Suporte",
-      description: "Tudo em um único lugar para gerir sua empresa",
+      subtitle: "Licença, Implementação e Suporte",
+      description: "Tudo em um único lugar para gerir sua empresa.",
       features: [
         "CRM - Leads e Negócios",
         "Fluxos de Automação de Processos",
@@ -21,21 +21,22 @@ const Solutions = () => {
     {
       title: "tiqchat",
       subtitle: "Atendimento via WhatsApp",
-      description: "Vários atendentes utilizando um único número",
+      description: "Vários atendentes utilizando um único número.",
       features: [
         "API Oficial e Não Oficial",
-        "Kanban",
         "Agendamento de Mensagens",
+        "Kanban", 
         "Departamentos",
         "Tags/Etiquetas",
-        "Chatbot/IA"
+        "Agentes de IA",
+        "Chatbots"
       ],
       color: "accent"
     },
     {
       title: "Agentes de IA",
       subtitle: "Atendimento Receptivo e Ativo",
-      description: "Atenda clientes e qualifique leads de forma humanizada",
+      description: "Atenda clientes e qualifique leads de forma humanizada.",
       features: [
         "Responde dúvidas",
         "Faz prospecção",
@@ -45,9 +46,9 @@ const Solutions = () => {
       color: "accent"
     },
     {
-      title: "Matic",
+      title: "Mautic",
       subtitle: "Automações de Marketing",
-      description: "Rastreie o comportamento de leads e clientes e execute uma comunicação mais assertiva",
+      description: "Rastreie o comportamento de leads e clientes e execute uma comunicação mais assertiva.",
       features: [
         "Campanhas de e-mail e whatsapp automatizadas",
         "Segmentações inteligentes",
@@ -62,7 +63,7 @@ const Solutions = () => {
     <section id="services" className="py-20 bg-gradient-to-br from-primary/5 to-secondary/5">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">
+          <h2 style={{ fontFamily: "DM Sans, sans-serif" }} className="text-3xl md:text-5xl font-bold mb-4">
             Nossas <span className="bg-gradient-primary bg-clip-text text-transparent">Soluções</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">

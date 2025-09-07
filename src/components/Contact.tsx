@@ -1,10 +1,4 @@
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/hooks/use-toast";
 import FormularioBitrix from "./FormularioBitrix";
 
 const Contact = () => {
@@ -16,12 +10,12 @@ const Contact = () => {
           <Card className="shadow-xl border-0">
             <CardHeader className="text-center">
               <CardTitle className="text-3xl md:text-4xl font-bold mb-4">
-                <span className="bg-gradient-primary bg-clip-text text-transparent">
+                <span style={{ fontFamily: "DM Sans, sans-serif" }} className="bg-gradient-primary bg-clip-text text-transparent">
                   Entre em contato
                 </span>
               </CardTitle>
               <CardDescription className="text-lg">
-                Fale agora com um representante e otimize sua empresa com nossas tecnologias de gestão de negócios.
+                Fale agora com um representante e otimize sua empresa com nossas tecnologias em gestão de negócios.
               </CardDescription>
             </CardHeader>
            <div>

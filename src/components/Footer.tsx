@@ -14,9 +14,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="md:col-span-2">
-            <div className="flex items-center mb-4">
+            <div style={{ fontFamily: "DM Sans, sans-serif" }} className="flex items-center mb-4">
               <span className="text-3xl font-bold primary-gradient bg-clip-text text-primary">
-                TiqTech
+                tiqtech
               </span>
             </div>
             <p className="text-muted-foreground mb-6 leading-relaxed max-w-md">
@@ -24,24 +24,22 @@ const Footer = () => {
               chatbots inteligentes e integrações avançadas com IA personalizada.
             </p>
             <div className="flex space-x-4">
-              <div 
+              <a 
+                href="https://www.linkedin.com/company/tiqtech/"
+                target="_blank"
                 className="p-2 bg-muted-foreground/10 rounded-lg hover:bg-primary transition-colors duration-300"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={20} />
-              </div>
-              <div
+              </a>
+              <a
+                href="https://www.instagram.com/tiqtech.com.br/"
+                target="_blank"
                 className="p-2 bg-muted-foreground/10 rounded-lg hover:bg-primary transition-colors duration-300"
                 aria-label="Instagram"
               >
                 <Instagram size={20} />
-              </div>
-              <div 
-                className="p-2 bg-muted-foreground/10 rounded-lg hover:bg-primary transition-colors duration-300"
-                aria-label="Twitter"
-              >
-                <Twitter size={20} />
-              </div>
+              </a>
             </div>
           </div>
 
@@ -78,11 +76,11 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center space-x-3">
                 <Mail size={16} className="text-primary flex-shrink-0" />
-                <a href="mailto:jardel@tiqtech.com.br"><span className="text-muted-foreground">jardel@tiqtech.com.br</span></a>
+                <a href="mailto:jardel@tiqtech.com.br"><span className="text-muted-foreground">contato@tiqtech.com.br</span></a>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone size={16} className="text-primary flex-shrink-0" />
-                <a href="https://api.whatsapp.com/send?phone=554796472001" target="_blank" ><span className="text-muted-foreground">(47) 996472001</span></a>
+                <a href="https://api.whatsapp.com/send?phone=554796472001" target="_blank" ><span className="text-muted-foreground">+55 (47) 99647-2001</span></a>
               </li>
               <li className="flex items-center space-x-3">
                 <MapPin size={16} className="text-primary flex-shrink-0" />

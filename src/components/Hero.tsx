@@ -23,7 +23,7 @@ const Hero = () => {
           </div>
 
           {/* Headline Principal */}
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          <h1 style={{ fontFamily: "DM Sans, sans-serif" }} className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
             <span className="bg-gradient-hero bg-clip-text text-transparent">
               Transforme Seu Negócio com <br /> Tecnologia
             </span>
@@ -46,30 +46,29 @@ const Hero = () => {
           
 
           {/* Principais Serviços */}
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
-            <div className="group bg-gradient-to-br from-primary/5 to-primary/10 border border-primary/20 rounded-xl p-6 hover:shadow-xl hover:scale-105 transition-all duration-300">
-              <div className="text-primary font-bold mb-3 text-lg">Bitrix24</div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div className="group bg-gradient-to-br from-primary/5 to-primary/10 border border-primary/20 rounded-xl p-6 hover:shadow-xl hover:scale-105 transition-all duration-300 max-w-[250px] md:max-w-none mx-auto">
+              <div style={{ fontFamily: "DM Sans, sans-serif" }} className="text-primary font-bold mb-3 text-lg">Bitrix24</div>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Parceiro Gold Bitrix24 - Gerenciamento total em um único lugar
+                Parceiro Gold - Gerenciamento em um único lugar.
               </p>
             </div>
-            
-            <div className="group bg-gradient-to-br from-secondary/5 to-secondary/10 border border-secondary/20 rounded-xl p-6 hover:shadow-xl hover:scale-105 transition-all duration-300">
-              <div className="text-secondary font-bold mb-3 text-lg">Tiqchat</div>
+
+            <div className="group bg-gradient-to-br from-secondary/5 to-secondary/10 border border-secondary/20 rounded-xl p-6 hover:shadow-xl hover:scale-105 transition-all duration-300 max-w-[250px] md:max-w-none mx-auto">
+              <div style={{ fontFamily: "DM Sans, sans-serif" }} className="text-secondary font-bold mb-3 text-lg">tiqchat</div>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Software para Atendimento de WhatsApp
+                Software para Atendimento de WhatsApp.
               </p>
             </div>
-            
-            <div className="group bg-gradient-to-br from-accent/5 to-accent/10 border border-accent/20 rounded-xl p-6 hover:shadow-xl hover:scale-105 transition-all duration-300">
-              <div className="text-accent font-bold mb-3 text-lg">Agentes de IA</div>
+
+            <div className="group bg-gradient-to-br from-accent/5 to-accent/10 border border-accent/20 rounded-xl p-6 hover:shadow-xl hover:scale-105 transition-all duration-300 max-w-[250px] md:max-w-none mx-auto">
+              <div style={{ fontFamily: "DM Sans, sans-serif" }} className="text-accent font-bold mb-3 text-lg">Agentes de IA</div>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Atendimento ativo e receptivo humanizado (sem chatbots)
+                Atendimento ativo e receptivo humanizado.
               </p>
             </div>
           </div>
 
-          
           </div>
         </div>
       </div>
