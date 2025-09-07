@@ -11,7 +11,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="pt-20 min-h-screen flex items-center bg-gradient-to-br from-background to-muted/30">
+    <section id="home" className="pt-10 min-h-screen flex items-center bg-gradient-to-br from-background to-muted/30">
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center">
           <div>
@@ -25,7 +25,7 @@ const Hero = () => {
           {/* Headline Principal */}
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
             <span className="bg-gradient-hero bg-clip-text text-transparent">
-              Transforme Seu Negócio com Tecnologia
+              Transforme Seu Negócio <br /> com Tecnologia
             </span>
           </h1>
 

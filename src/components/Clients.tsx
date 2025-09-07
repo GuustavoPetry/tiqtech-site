@@ -7,12 +7,10 @@ const Clients = () => {
 
   // Mock client logos - in a real implementation, these would be actual client logos
   const clientLogos = [
-    { name: "Eisen", logo: "/logos2/eisen.png" },
-    { name: "Hansel Connect", logo: "/logos2/hansel.png" },
-    // { name: "Precisa Automação", logo: "/logos2/precisa.webp" },
-    // { name: "JF Assessoria", logo: "/logos/jf_assessoria.png" },
-    { name: "Projacseg", logo: "/logos2/projacseg.webp" },
-    { name: "QVS", logo: "logos2/QVS.webp" },
+    { name: "Hansel Connect", logo: "/logos/hansel.png" },
+    { name: "Projacseg", logo: "/logos/projacseg.webp" },
+    { name: "Eisen", logo: "/logos/eisen.png" },
+    { name: "QVS", logo: "logos/QVS.webp" },
   ];
 
   return (
@@ -40,20 +38,20 @@ const Clients = () => {
         </div>
 
         {/* Logos dos clientes */}
-        <div className="border-t pt-12">
-          <p className="text-center text-muted-foreground mb-8">
-            Alguns de nossos clientes parceiros
+        <div className="border-t">
+          <p className="text-center text-muted-foreground pt-12 mb-6 from-accent-foreground">
+            Clientes que confiam na tiqtech
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 items-center">
+          <div className="grid grid-cols-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 items-center">
             {clientLogos.map((client, index) => (
               <div
                 key={index}
-                className="aspect-square rounded-lg flex items-center justify-center transition-colors"
+                className="aspect-video rounded-lg flex items-center justify-center transition-colors"
               >
               
               <img
                 src={client.logo}
-                className="object-contain max-h-16"
+                className="object-contain max-h-12"
               />
               </div>
             ))}

@@ -59,7 +59,7 @@ const Solutions = () => {
   ];
 
   return (
-    <section id="solucoes" className="py-20 bg-gradient-to-br from-muted/30 to-muted/60">
+    <section id="services" className="py-20 bg-gradient-to-br from-muted/30 to-muted/60">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
