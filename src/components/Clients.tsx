@@ -1,8 +1,10 @@
 const Clients = () => {
   const clientTypes = [
-    "Consultorias",
-    "Negócios B2B", 
-    "Corretoras"
+    "Briefing",
+    "Análise", 
+    "Planejamento",
+    "Execução",
+    "Treinamento"
   ];
 
   // Mock client logos - in a real implementation, these would be actual client logos
@@ -18,30 +20,17 @@ const Clients = () => {
   return (
     <section id="clientes" className="py-20 bg-gradient-to-br from-muted to-muted/30">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center">
           <h2 style={{ fontFamily: "DM Sans, sans-serif" }} className="text-3xl md:text-5xl font-bold mb-4">
             Quem são nossos <span className="bg-gradient-primary bg-clip-text text-transparent">clientes</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Atendemos empresas de diversos segmentos com soluções personalizadas
           </p>
         </div>
 
-        {/* Tipos de clientes */}
-        <div className="grid grid-cols-3 md:grid-cols-3 gap-6 mb-16 max-w-4xl mx-auto text-center">
-          {clientTypes.map((type, index) => (
-            <div key={index} className="text-center">
-              <div className="bg-gradient-primary w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white font-bold w-4">{index + 1}</span>
-              </div>
-              <h3 style={{ fontFamily: "DM Sans, sans-serif" }} className="text-muted-foreground text-lg font-semibold">{type}</h3>
-            </div>
-          ))}
-        </div>
-
         {/* Logos dos clientes */}
-        <div className="border-t">
-          <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-6 gap-6 items-center pt-12 p-4">
+          <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-6 gap-6 items-center p-8 mb-20 mt-8">
             {clientLogos.map((client, index) => (
               <div
                 key={index}
@@ -55,6 +44,24 @@ const Clients = () => {
               </div>
             ))}
           </div>
+
+          <div className="border-t"></div>
+
+        {/* Etapas da Implementação */}
+        <div className="text-center mt-24">
+          <h2 style={{ fontFamily: "DM Sans, sans-serif" }} className="text-3xl md:text-5xl font-bold mb-20">
+            Etapas da <span className="bg-gradient-primary bg-clip-text text-transparent">Implementação</span>
+          </h2>
+        </div>
+        <div className="grid grid-cols-5 md:grid-cols-5 gap-6 mb-16 max-w-4xl mx-auto text-center">
+          {clientTypes.map((type, index) => (
+            <div key={index} className="text-center">
+              <div className="bg-gradient-primary w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-white font-bold w-4">{index + 1}</span>
+              </div>
+              <h3 style={{ fontFamily: "DM Sans, sans-serif" }} className="text-muted-foreground text-lg font-semibold">{type}</h3>
+            </div>
+          ))}
         </div>
       </div>
     </section>

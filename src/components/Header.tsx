@@ -21,12 +21,14 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div style={{ fontFamily: "DM Sans, sans-serif" }} className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-            tiqtech
-          </div>
+          <img
+            src="/logos/tiqtech.png"
+            alt="tiqtech"
+            className="h-8 w-auto"
+          />
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8 pl-24">
+          <nav className="hidden md:flex items-center space-x-8 pl-16">
             <button
               onClick={() => scrollToSection("home")}
               className="text-foreground hover:text-primary transition-colors"

@@ -1,6 +1,6 @@
-import { 
-  Mail, 
-  Phone, 
+import {
+  Mail,
+  Phone,
   MapPin,
   Linkedin,
   Instagram,
@@ -14,17 +14,18 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="md:col-span-2">
-            <div style={{ fontFamily: "DM Sans, sans-serif" }} className="flex items-center mb-4">
-              <span className="text-3xl font-bold primary-gradient bg-clip-text text-primary">
-                tiqtech
-              </span>
-            </div>
+            {/* Logo */}
+            <img
+              src="/logos/footerLogo.png"
+              alt="tiqtech"
+              className="h-8 w-auto"
+            />
             <p className="text-muted-foreground mb-6 leading-relaxed max-w-md">
-              Transformamos negócios através da tecnologia. Oferecemos soluções completas em gestão empresarial, 
+              Transformamos negócios através da tecnologia. Oferecemos soluções completas em gestão empresarial,
               chatbots inteligentes e integrações avançadas com IA personalizada.
             </p>
             <div className="flex space-x-4">
-              <a 
+              <a
                 href="https://www.linkedin.com/company/tiqtech/"
                 target="_blank"
                 className="p-2 bg-muted-foreground/10 rounded-lg hover:bg-primary transition-colors duration-300"
