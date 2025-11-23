@@ -41,7 +41,7 @@ const Clients = () => {
 
         {/* Logos dos clientes */}
         <div className="border-t">
-          <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-6 gap-6 items-center pt-12">
+          <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-6 gap-6 items-center pt-12 p-4">
             {clientLogos.map((client, index) => (
               <div
                 key={index}
