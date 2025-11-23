@@ -53,7 +53,7 @@ const Clients = () => {
             Etapas da <span className="bg-gradient-primary bg-clip-text text-transparent">Implementação</span>
           </h2>
         </div>
-        <div className="grid grid-cols-5 md:grid-cols-5 gap-6 mb-16 max-w-4xl mx-auto text-center">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-6 mb-16 max-w-4xl mx-auto text-center">
           {clientTypes.map((type, index) => (
             <div key={index} className="text-center">
               <div className="bg-gradient-primary w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4">
