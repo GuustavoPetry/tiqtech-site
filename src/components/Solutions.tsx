@@ -19,7 +19,7 @@ const Solutions = () => {
         "Envie e gerencie contratos para assinatura digital",
       ],
       color: "primary",
-      image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800"
+      image: "/logos/bitrix1.png"
     },
     {
       title: "Organização",
@@ -34,7 +34,7 @@ const Solutions = () => {
         "Toda empresa em um único lugar",
       ],
       color: "accent",
-      image: "https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=800"
+      image: "/logos/bitrix5.png"
     },
     {
       title: "Eficiência",
@@ -49,7 +49,7 @@ const Solutions = () => {
         "Salve dados e gere documentos"
       ],
       color: "accent",
-      image: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800"
+      image: "/logos/bitrix3.png"
     },
     {
       title: "Sinergia",
@@ -64,7 +64,7 @@ const Solutions = () => {
         "Trabalhe com Lousas compartilhadas, o Miro do Bitrix24"
       ],
       color: "primary",
-      image: "https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&w=800"
+      image: "/logos/bitrix4.png"
     },
     {
       title: "Entrega",
@@ -79,7 +79,7 @@ const Solutions = () => {
         "Delegue fluxos de tarefas automaticamente"
       ],
       color: "primary",
-      image: "https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=800"
+      image: "/logos/bitrix2.png"
     },
     {
       title: "Inteligência",
@@ -94,7 +94,7 @@ const Solutions = () => {
         "Layout de Dashboards customizados: Abas, Linhas, Colunas e Títulos"
       ],
       color: "primary",
-      image: "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800"
+      image: "/logos/bitrix5.png"
     }
   ];
 
@@ -146,16 +146,27 @@ const Solutions = () => {
             >
               {solutions.map((solution, index) => (
                 <div key={index} className="w-full flex-shrink-0 px-4">
-                  <div className="group transition-all duration-500 border-0 hover:scale-[1.02] backdrop-blur-sm rounded-lg overflow-hidden flex flex-col md:flex-row md:h-96">
+                  <div className="group transition-all duration-500 border-0 hover:scale-[1.02] backdrop-blur-sm rounded-lg overflow-hidden flex flex-col md:flex-row-reverse md:h-96">
+
+                    {/* IMAGEM */}
+                    <div className="relative w-full md:w-7/12 h-60 md:h-full overflow-hidden flex-shrink-0">
+                      <img
+                        src={solution.image}
+                        alt={solution.subtitle}
+                        className="w-full h-full object-contain transition-transform duration-700"
+                      />
+                    </div>
+
+
 
                     {/* CONTEÚDO */}
                     <div className="w-full md:w-5/12 px-4 py-6 md:px-6 md:py-8 flex flex-col justify-between">
 
                       <div>
                         <div className="flex items-center gap-3 mb-3">
-                          <span className={`px-3 py-1 rounded-full text-xs md:text-sm font-medium border ${solution.color === 'primary'
-                              ? 'border-blue-500 text-blue-500 bg-blue-500/10'
-                              : 'border-cyan-500 text-cyan-500 bg-cyan-500/10'
+                          <span className={`px-3 py-1 rounded-full text-xs md:text-xs font-medium border ${solution.color === 'primary'
+                            ? 'border-blue-500 text-blue-500 bg-blue-500/10'
+                            : 'border-cyan-500 text-cyan-500 bg-cyan-500/10'
                             }`}>
                             {solution.title}
                           </span>
@@ -174,8 +185,8 @@ const Solutions = () => {
                         {solution.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-start gap-2 md:gap-3 group-hover:translate-x-1 transition-transform duration-300">
                             <div className={`w-2 h-2 md:w-2.5 md:h-2.5 rounded-full mt-1 flex-shrink-0 ${solution.color === 'primary'
-                                ? 'bg-blue-500 shadow-lg shadow-blue-500/50'
-                                : 'bg-cyan-500 shadow-lg shadow-cyan-500/50'
+                              ? 'bg-blue-500 shadow-lg shadow-blue-500/50'
+                              : 'bg-cyan-500 shadow-lg shadow-cyan-500/50'
                               }`}></div>
                             <span className="text-xs md:text-sm text-gray-600 group-hover:text-gray-900 transition-colors duration-300 leading-relaxed">
                               {feature}
@@ -185,18 +196,8 @@ const Solutions = () => {
                       </ul>
 
                     </div>
-
-                    {/* IMAGEM */}
-                    <div className="relative w-full md:w-7/12 h-40 md:h-full overflow-hidden flex-shrink-0">
-                      <img
-                        src={solution.image}
-                        alt={solution.subtitle}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-black/40 to-transparent"></div>
-                    </div>
-
                   </div>
+
 
                 </div>
               ))}
@@ -205,19 +206,21 @@ const Solutions = () => {
 
           <button
             onClick={goToPrevious}
-            className="absolute left-0 top-1/2 -translate-y-1/2 bg-white hover:bg-gray-100 text-gray-800 rounded-full p-3 shadow-lg transition-all duration-300 hover:scale-110 z-10"
+            className="absolute -left-4 top-1/2 -translate-y-1/2 bg-transparent hover:bg-transparent text-gray-800 p-3 transition-all duration-300 hover:scale-110 z-20"
             aria-label="Previous slide"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
 
+
           <button
             onClick={goToNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 bg-white hover:bg-gray-100 text-gray-800 rounded-full p-3 shadow-lg transition-all duration-300 hover:scale-110 z-10"
+            className="absolute -right-4 top-1/2 -translate-y-1/2 bg-transparent hover:bg-transparent text-gray-800 p-3 transition-all duration-300 hover:scale-110 z-20"
             aria-label="Next slide"
           >
             <ChevronRight className="w-6 h-6" />
           </button>
+
 
           <div className="flex justify-center gap-3 mt-8">
             {solutions.map((_, index) => (
@@ -225,8 +228,8 @@ const Solutions = () => {
                 key={index}
                 onClick={() => goToSlide(index)}
                 className={`transition-all duration-300 rounded-full ${index === currentIndex
-                    ? 'w-12 h-3 bg-gradient-to-r from-blue-600 to-cyan-500'
-                    : 'w-3 h-3 bg-gray-300 hover:bg-gray-400'
+                  ? 'w-12 h-3 bg-gradient-to-r from-blue-600 to-cyan-500'
+                  : 'w-3 h-3 bg-gray-300 hover:bg-gray-400'
                   }`}
                 aria-label={`Go to slide ${index + 1}`}
               />

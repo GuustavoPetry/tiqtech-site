@@ -13,7 +13,7 @@ const Hero = () => {
   return (
     <section id="home" className="pt-10 min-h-screen flex items-center bg-gradient-to-br from-muted to-muted">
       <div className="container mx-auto px-4 pb-10 pt-20">
-        <div className="max-w-6xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto text-center">
           <div>
             {/* Selo Parceiro Gold */}
             <div className="mb-8">
@@ -36,7 +36,7 @@ const Hero = () => {
             </p>
 
             {/* Call to Action */}
-            <div className="mb-12">
+            <div className="mb-10">
               <Button
                 size="lg"
                 onClick={scrollToContact}

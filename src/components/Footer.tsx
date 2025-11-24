@@ -4,19 +4,18 @@ import {
   MapPin,
   Linkedin,
   Instagram,
-  Twitter
 } from "lucide-react";
 
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-br from-muted to-muted text-foreground">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 ">
           {/* Company Info */}
-          <div className="md:col-span-2">
+          <div className="md:col-span-3">
             {/* Logo */}
             <img
-              src="/logos/footerLogo.png"
+              src="/logos/logo2.png"
               alt="tiqtech"
               className="h-8 w-auto"
             />
@@ -44,7 +43,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Quick Links
           <div>
             <h4 className="text-lg font-semibold mb-4">Links Rápidos</h4>
             <ul className="space-y-2">
@@ -69,7 +68,7 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Contact Info */}
           <div>
