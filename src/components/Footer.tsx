@@ -1,30 +1,30 @@
-import { 
-  Mail, 
-  Phone, 
+import {
+  Mail,
+  Phone,
   MapPin,
   Linkedin,
   Instagram,
-  Twitter
 } from "lucide-react";
 
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-br from-muted to-muted text-foreground">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 ">
           {/* Company Info */}
-          <div className="md:col-span-2">
-            <div style={{ fontFamily: "DM Sans, sans-serif" }} className="flex items-center mb-4">
-              <span className="text-3xl font-bold primary-gradient bg-clip-text text-primary">
-                tiqtech
-              </span>
-            </div>
+          <div className="md:col-span-3">
+            {/* Logo */}
+            <img
+              src="/logos/logo2.png"
+              alt="tiqtech"
+              className="h-8 w-auto"
+            />
             <p className="text-muted-foreground mb-6 leading-relaxed max-w-md">
-              Transformamos negócios através da tecnologia. Oferecemos soluções completas em gestão empresarial, 
+              Transformamos negócios através da tecnologia. Oferecemos soluções completas em gestão empresarial,
               chatbots inteligentes e integrações avançadas com IA personalizada.
             </p>
             <div className="flex space-x-4">
-              <a 
+              <a
                 href="https://www.linkedin.com/company/tiqtech/"
                 target="_blank"
                 className="p-2 bg-muted-foreground/10 rounded-lg hover:bg-primary transition-colors duration-300"
@@ -43,7 +43,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Quick Links
           <div>
             <h4 className="text-lg font-semibold mb-4">Links Rápidos</h4>
             <ul className="space-y-2">
@@ -68,7 +68,7 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Contact Info */}
           <div>
