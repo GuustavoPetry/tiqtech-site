@@ -138,7 +138,7 @@ const Solutions = () => {
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto relative">
+        <div className="max-w-6xl mx-auto relative">
           <div className="overflow-hidden">
             <div
               className="flex transition-transform duration-700 ease-in-out"
@@ -146,8 +146,48 @@ const Solutions = () => {
             >
               {solutions.map((solution, index) => (
                 <div key={index} className="w-full flex-shrink-0 px-4">
-                  <div className="group hover:shadow-2xl transition-all duration-500 border-0 shadow-lg bg-gradient-to-br from-white to-gray-50 hover:scale-[1.02] backdrop-blur-sm rounded-lg overflow-hidden flex flex-col md:flex-row h-96">
-                    <div className="relative w-full md:w-2/5 h-48 md:h-full overflow-hidden flex-shrink-0">
+                  <div className="group transition-all duration-500 border-0 hover:scale-[1.02] backdrop-blur-sm rounded-lg overflow-hidden flex flex-col md:flex-row md:h-96">
+
+                    {/* CONTEÚDO */}
+                    <div className="w-full md:w-5/12 px-4 py-6 md:px-6 md:py-8 flex flex-col justify-between">
+
+                      <div>
+                        <div className="flex items-center gap-3 mb-3">
+                          <span className={`px-3 py-1 rounded-full text-xs md:text-sm font-medium border ${solution.color === 'primary'
+                              ? 'border-blue-500 text-blue-500 bg-blue-500/10'
+                              : 'border-cyan-500 text-cyan-500 bg-cyan-500/10'
+                            }`}>
+                            {solution.title}
+                          </span>
+                        </div>
+
+                        <h3 className="text-base md:text-lg font-bold text-gray-900 mb-2 leading-snug md:leading-tight group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-cyan-500 group-hover:bg-clip-text transition-all duration-300">
+                          {solution.subtitle}
+                        </h3>
+
+                        <p className="text-gray-600 text-sm md:text-base mb-4 leading-relaxed">
+                          {solution.description}
+                        </p>
+                      </div>
+
+                      <ul className="space-y-2">
+                        {solution.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-start gap-2 md:gap-3 group-hover:translate-x-1 transition-transform duration-300">
+                            <div className={`w-2 h-2 md:w-2.5 md:h-2.5 rounded-full mt-1 flex-shrink-0 ${solution.color === 'primary'
+                                ? 'bg-blue-500 shadow-lg shadow-blue-500/50'
+                                : 'bg-cyan-500 shadow-lg shadow-cyan-500/50'
+                              }`}></div>
+                            <span className="text-xs md:text-sm text-gray-600 group-hover:text-gray-900 transition-colors duration-300 leading-relaxed">
+                              {feature}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+
+                    </div>
+
+                    {/* IMAGEM */}
+                    <div className="relative w-full md:w-7/12 h-40 md:h-full overflow-hidden flex-shrink-0">
                       <img
                         src={solution.image}
                         alt={solution.subtitle}
@@ -156,37 +196,8 @@ const Solutions = () => {
                       <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-black/40 to-transparent"></div>
                     </div>
 
-                    <div className="w-full md:w-3/5 px-6 py-8 flex flex-col justify-between">
-                      <div>
-                        <div className="flex items-center gap-3 mb-4">
-                          <span className={`px-3 py-1 rounded-full text-sm font-medium border ${
-                            solution.color === 'primary'
-                              ? 'border-blue-500 text-blue-500 bg-blue-500/10'
-                              : 'border-cyan-500 text-cyan-500 bg-cyan-500/10'
-                          }`}>
-                            {solution.title}
-                          </span>
-                        </div>
-                        <h3 className="text-2xl font-bold text-gray-900 mb-3 leading-tight group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-cyan-500 group-hover:bg-clip-text transition-all duration-300">{solution.subtitle}</h3>
-                        <p className="text-gray-600 mb-6 text-base leading-relaxed">
-                          {solution.description}
-                        </p>
-                      </div>
-
-                      <ul className="space-y-3">
-                        {solution.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-start gap-3 group-hover:translate-x-1 transition-transform duration-300">
-                            <div className={`w-2.5 h-2.5 rounded-full mt-1 flex-shrink-0 ${
-                              solution.color === 'primary'
-                                ? 'bg-blue-500 shadow-lg shadow-blue-500/50'
-                                : 'bg-cyan-500 shadow-lg shadow-cyan-500/50'
-                            }`}></div>
-                            <span className="text-sm text-gray-600 group-hover:text-gray-900 transition-colors duration-300 leading-relaxed">{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
                   </div>
+
                 </div>
               ))}
             </div>
@@ -213,11 +224,10 @@ const Solutions = () => {
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`transition-all duration-300 rounded-full ${
-                  index === currentIndex
+                className={`transition-all duration-300 rounded-full ${index === currentIndex
                     ? 'w-12 h-3 bg-gradient-to-r from-blue-600 to-cyan-500'
                     : 'w-3 h-3 bg-gray-300 hover:bg-gray-400'
-                }`}
+                  }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
             ))}
