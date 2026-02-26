@@ -1,27 +1,19 @@
+version: '3.9'
+
 services:
   tiqtech-site:
-    image: tiqtech-site:latest
-    ports:
-      - "3333:80"
+    image: tiqtech-site:v1
     networks:
-      - my-network
+      - network_swarm_public   # rede existente onde Traefik está
     deploy:
       replicas: 1
-      restart_policy:
-        condition: any
-        delay: 5s
       labels:
-        # Habilita Traefik
         - "traefik.enable=true"
-
-        # ===== ROTEAMENTO DO DOMÍNIO =====
         - "traefik.http.routers.tiqtech-site.rule=Host(`lead.tiqtech.com.br`)"
         - "traefik.http.routers.tiqtech-site.entrypoints=websecure"
         - "traefik.http.routers.tiqtech-site.tls.certresolver=letsencryptresolver"
-
-        # Porta interna do container (Nginx serve build na porta 80)
         - "traefik.http.services.tiqtech-site.loadbalancer.server.port=80"
 
 networks:
-  my-network:
+  network_swarm_public:
     external: true

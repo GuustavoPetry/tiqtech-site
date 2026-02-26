@@ -8,11 +8,11 @@ export default function FormularioBitrix() {
 
     const script = document.createElement("script");
     script.src =
-      'https://cdn.bitrix24.com.br/b35011775/crm/form/loader_4.js?' +
+      'https://cdn.bitrix24.com.br/b29807247/crm/form/loader_53.js?' +
       Math.floor(Date.now() / 180000);
 
     script.async = true;
-    script.dataset.b24Form = "inline/4/vbt7km";
+    script.dataset.b24Form = "inline/53/1zf4jg";
     script.dataset.skipMoving = "true";
 
     containerRef.current.appendChild(script);
